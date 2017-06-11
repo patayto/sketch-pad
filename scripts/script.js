@@ -144,7 +144,7 @@ function color() {
 		}
 	} else if(color_code === 'eraser') {
 		if ($(this).data('set') === 1){
-			$(this).css({"background-color": "rgba(0, 0, 0, 0.05)", "opacity": "1"});
+			$(this).css({"background-color": "#FFF", "opacity": "1"});
 			$(this).data('set', 0);
 		}
 	} else {
