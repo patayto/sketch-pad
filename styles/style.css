@@ -1,0 +1,7 @@
+#container {
+	box-sizing: border-box;
+	height: 700px;
+	width: 700px;
+	margin: 50px auto;
+	border: 5px solid black;
+}
