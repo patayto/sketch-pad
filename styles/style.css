@@ -36,7 +36,7 @@ html {
 #controls {
 	display: inline-block;
 	float: left;
-	margin-top: 20px;
+	margin-top: 11px;
 	margin-left: 50px;
 	height: 400px;
 	width: 150px;
@@ -165,24 +165,44 @@ p {
 
 #var_op {
 	display: block;
-	height: 52px;
+	height: 40px;
 	width: 90px;
 	font-family: 'Coming Soon', cursive;
 	font-size: 15px;
-	margin: 7px auto;
+	margin-top: 5px;
+	margin-bottom: 1px;
+	margin-left: auto;
+	margin-right: auto;
 	background-color: white;
 	border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
 	border: 2px solid black;
 	color: black;
 }
 
-#var_op_on {
+#over {
+	display: block;
+	height: 40px;
+	width: 90px;
+	font-family: 'Coming Soon', cursive;
+	font-size: 15px;
+	margin-top: 5px;
+	margin-bottom: 1px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: white;
+	border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+	border: 2px solid black;
+	color: black;
+}
+
+#var_op_on, #over_on {
 	display: inline-block;
-	height: 30px;
+	height: 25px;
 	width: 40px;
 	font-family: 'Coming Soon', cursive;
 	font-size: 15px;
 	margin-top: 1px;
+	margin-bottom: 10px;
 	background-color: white;
 	border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
 	border: 2px solid black;
@@ -193,9 +213,9 @@ p {
 	padding-top: 10px;
 }
 
-#var_op_off {
+#var_op_off, #over_off {
 	display: inline-block;
-	height: 30px;
+	height: 25px;
 	width: 40px;
 	font-family: 'Coming Soon', cursive;
 	font-size: 15px;

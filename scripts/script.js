@@ -68,6 +68,8 @@ $(document).ready(function() {
 	$('#eraser').on('click', function(){
 		$('#buttons').data('selected', 'eraser');
 	});
+
+	// toggle gradient and overwrite mode
 	$('#var_op').on('click', function(){
 		if($('#var_op').data('var_op') === 'off'){
 			$('#var_op').data('var_op', 'on');
@@ -77,6 +79,17 @@ $(document).ready(function() {
 			$('#var_op').data('var_op', 'off');
 			$('#var_op_off').css({'background-color': 'black', 'color': 'white'});
 			$('#var_op_on').css({'background-color': 'rgba(0,0,0,0.05)', 'color': 'black'});
+		}
+	})
+	$('#over').on('click', function(){
+		if($('#over').data('over') === 'off'){
+			$('#over').data('over', 'on');
+			$('#over_on').css({'background-color': 'black', 'color': 'white'});
+			$('#over_off').css({'background-color': 'rgba(0,0,0,0.05)', 'color': 'black'});
+		} else {
+			$('#over').data('over', 'off');
+			$('#over_off').css({'background-color': 'black', 'color': 'white'});
+			$('#over_on').css({'background-color': 'rgba(0,0,0,0.05)', 'color': 'black'});
 		}
 	})
 });
@@ -89,7 +102,7 @@ function noenter() {
 function color() {
 	var color_code = $('#buttons').data('selected');
 	if (color_code === 'random') {
-		if ($(this).data('set') === 0) {
+		if ($(this).data('set') === 0 || $('#over').data('over') === 'on') {
 			var randomR = Math.floor(Math.random() * 256);
 			var randomG = Math.floor(Math.random() * 256);
 			var randomB = Math.floor(Math.random() * 256);
@@ -139,7 +152,7 @@ function color() {
 				$('#rainbow').data('num', 0);
 				break;
 			}
-			if ($(this).data('set') === 0) {
+			if ($(this).data('set') === 0 || $('#over').data('over') === 'on') {
 				if ($('#var_op').data('var_op') === 'on'){
 					$(this).css({"background-color": $('#buttons').data('rainbow_selected'), "opacity": "0.2"});
 				} else {
@@ -161,7 +174,7 @@ function color() {
 			$(this).data('set', 0);
 		}
 	} else {
-		if ($(this).data('set') === 0) {
+		if ($(this).data('set') === 0 || $('#over').data('over') === 'on') {
 			if ($('#var_op').data('var_op') === 'on'){
 				$(this).css({"background-color": color_code, "opacity": "0.2"});
 			} else {
