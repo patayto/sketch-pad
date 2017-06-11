@@ -2,10 +2,15 @@ $(document).ready(function() {
 	draw(16);
 	$('.cell').on('mouseenter', color);
 	$('#new_canvas').on('click', function(){
-		$('.cell').css({"background-color": "#FFF", "opacity": "1"});
-		$('.cell').data('set', 0);
-		$('#buttons').hide();
-		$('#canvas_form').fadeIn();
+		if($(this).data('clicked') === 'no'){
+			$(this).data('clicked', 'yes');
+			$('#buttons').hide();
+			$('#canvas_form').fadeIn();
+		} else {
+			$(this).data('clicked', 'no');
+			$('#canvas_form').hide();
+			$('#buttons').fadeIn();
+		}
 	});
 	$('#clear_canvas').on('click', function(){
 		$('.cell').css({"background-color": "#FFF", "opacity": "1"});
@@ -13,10 +18,18 @@ $(document).ready(function() {
 	});
 	$('input').on('keyup', function(event) {
 		if(event.keyCode === 13){
-			draw($(this).val());
+			var value = $(this).val();
+			if(value > 200){
+				alert("Trust me, anything over 200 will crash your browser");
+			} else if(value >= 1){
+				draw($(this).val());
+			} else {
+				draw(1);
+			}
 			$('#canvas_form').hide();
 			$('#buttons').fadeIn();
 			$('form').trigger('reset');
+			$('#new_canvas').data('clicked', 'no');
 		}
 		$('.cell').on('mouseenter', color);
 	});
