@@ -1,17 +1,33 @@
-<!-- Set up default index file with a container in the body -->
-<!-- Use append() to dynamically add div elements whose height and width will be determined by the number of cells the user wants (for loop should be able to handle this) -->
-<!-- alert (doesn't actually have to be an alert, I can just show/hide a nice input container) + form combination? with val() to read the users input value. On submit call the draw helper function to redraw the canvas. also hide the input box again -->
 <!DOCTYPE html>
 <html>
 	<head>
 		<title>Sketch</title>
 		<link rel="stylesheet" type="text/css" href="styles/style.css">
 		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Coming+Soon" rel="stylesheet">
 	</head>
 	<body>
+		<div id="header">Stop trying to make sketch happen</div>
 		<div id="all">
 			<div id="controls">
 				<button id="new_canvas">New Canvas</button>
+				<button id="clear_canvas">Clear Canvas</button>
+				<div id="buttons" data-selected="black" data-rainbow_select="red">
+					<button class="color" id="black">Black</button>
+					<button class="color" id="red">Red</button>
+					<button class="color" id="orange">Orange</button>
+					<button class="color" id="yellow">Yellow</button>
+					<button class="color" id="green">Green</button>
+					<button class="color" id="blue">Blue</button>
+					<button class="color" id="indigo">Indigo</button>
+					<button class="color" id="violet">Violet</button>
+					<button class="color" id="rainbow" data-num='0'>Rainbow</button>
+					<button class="color" id="random">Random</button>
+					<button class="color" id="eraser">Eraser</button>
+					<button class="opacity" id="var_op" data-var_op='off'>Variable Opacity</button>
+					<div class="opacity" id="var_op_on">On</div>
+					<div class="opacity" id="var_op_off">Off</div>
+				</div>
 				<div id="canvas_form">
 					<p>How big would you like your canvas to be? <br/><br/>(How many cells in one row/column)</p>
 					<form>

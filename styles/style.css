@@ -1,7 +1,17 @@
+html {
+	background-color: rgba(0, 0, 0, 0.05);
+}
+
+#header {
+	font-family: 'Coming Soon', cursive;
+	font-size: 50px;
+	margin: 0 207px;
+}
+
 #all {
 	height: 750px;
 	width: 1000px;
-	margin: 100px auto;
+	margin: 0px auto;
 }
 
 #container {
@@ -35,17 +45,35 @@
 	height: 40px;
 	width: 100px;
 	font-size: 14px;
-	font-family: Roboto, arial, sans-serif;
+	font-family: 'Coming Soon', cursive;
 	display: block;
 	margin: 10px auto;
+	border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+	border: solid 2px rgba(0, 0, 0, 1);
+	background-color: white;
+}
+
+#clear_canvas {
+	height: 40px;
+	width: 100px;
+	font-size: 14px;
+	font-family: 'Coming Soon', cursive;
+	display: block;
+	margin: 10px auto;
+	border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+	border: solid 2px rgba(0, 0, 0, 1);
+	background-color: white;
 }
 
 #canvas_form {
 	display: none;
-	height: 200px;
+	padding: 10px;
+	height: 240px;
 	width: 120px;
 	margin: 10px auto;
-	border: 1px solid black;
+	border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+	border: solid 2px rgba(0, 0, 0, 1);
+	background-color: white;
 }
 
 input {
@@ -55,11 +83,129 @@ input {
 	height: 20px;
 	text-align: center;
 	font-size: 16px;
-	font-family: Roboto, arial, sans-serif;
+	font-family: 'Coming Soon', cursive;
 }
 
 p {
 	font-size: 16px;
-	font-family: Roboto, arial, sans-serif;
+	font-family: 'Coming Soon', cursive;
 	text-align: center;
 }
+
+.color {
+	display: block;
+	height: 30px;
+	width: 90px;
+	font-family: 'Coming Soon', cursive;
+	font-size: 14px;
+	margin: 7px auto;
+	background-color: white;
+	border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+}
+
+#black {
+	border: 2px solid black;
+	color: black;
+}
+
+#red {
+	border: 2px solid red;
+	color: red;
+}
+
+#orange {
+	border: 2px solid orange;
+	color: orange;
+}
+
+#yellow {
+	border: 2px solid yellow;
+	color: yellow;
+}
+
+#green {
+	border: 2px solid green;
+	color: green;
+}
+
+#blue {
+	border: 2px solid blue;
+	color: blue;
+}
+
+#indigo {
+	border: 2px solid indigo;
+	color: indigo;
+}
+
+#violet {
+	border: 2px solid violet;
+	color: violet;
+}
+
+#rainbow {
+	border: 2px solid aquamarine;
+	background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+    background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+    color:transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+#random {
+	border: 2px solid #1680e2;
+	color: #f4264b;
+}
+
+#eraser {
+	border: 2px solid black;
+	color: black;
+}
+
+#var_op {
+	display: block;
+	height: 52px;
+	width: 90px;
+	font-family: 'Coming Soon', cursive;
+	font-size: 15px;
+	margin: 7px auto;
+	background-color: white;
+	border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+	border: 2px solid black;
+	color: black;
+}
+
+#var_op_on {
+	display: inline-block;
+	height: 30px;
+	width: 40px;
+	font-family: 'Coming Soon', cursive;
+	font-size: 15px;
+	margin-top: 1px;
+	background-color: white;
+	border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+	border: 2px solid black;
+	color: black;
+	float: left;
+	margin-left: 30px;
+	text-align: center;
+	padding-top: 10px;
+}
+
+#var_op_off {
+	display: inline-block;
+	height: 30px;
+	width: 40px;
+	font-family: 'Coming Soon', cursive;
+	font-size: 15px;
+	margin-top: 1px;
+	margin-right: 28px;
+	background-color: black;
+	border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+	border: 2px solid black;
+	color: white;
+	float: right;
+	text-align: center;
+	padding-top: 10px;
+}
+
