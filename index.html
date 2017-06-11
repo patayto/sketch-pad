@@ -6,9 +6,22 @@
 	<head>
 		<title>Sketch</title>
 		<link rel="stylesheet" type="text/css" href="styles/style.css">
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 	</head>
 	<body>
-		<div id="new_canvas">New Canvas</div>
-		<div id="container"></div>
+		<div id="all">
+			<div id="controls">
+				<button id="new_canvas">New Canvas</button>
+				<div id="canvas_form">
+					<p>How big would you like your canvas to be? <br/><br/>(How many cells in one row/column)</p>
+					<form>
+						<input type="number" name="cell_count" autocomplete="off" onkeypress="return noenter()">
+					</form>
+				</div>
+			</div>
+			<div id="container"></div>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script type="text/javascript" src="scripts/script.js"></script>
 	</body>
 </html>
